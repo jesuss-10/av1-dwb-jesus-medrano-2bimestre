@@ -88,3 +88,4 @@ av1-dwb-jesus2bti-2bimestre/
 ---
 
 *Este projeto foi desenvolvido exclusivamente com tecnologias web padrão, focando em boas práticas de desenvolvimento frontend.*
+## Atualizado em 03/06/2026
