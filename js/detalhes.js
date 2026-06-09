@@ -41,14 +41,7 @@ function displayPokemonDetails(pokemon) {
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body text-center">
-                    <img src="${pokemon.sprites.front_default || 'https://via.placeholder.com/200'}" alt="${pokemon.name}" class="mb-3">
-                    <h2>${pokemon.name}</h2>
-                    <p><strong>Altura:</strong> ${pokemon.height / 10} m</p>
-                    <p><strong>Peso:</strong> ${pokemon.weight / 10} kg</p>
-                    <p><strong>Tipos:</strong> ${pokemon.types.map(type => type.type.name).join(', ')}</p>
-                    <p><strong>Habilidades:</strong> ${pokemon.abilities.map(ability => ability.ability.name).join(', ')}</p>
-                    <p><strong>Stats:</strong></p>
-                    <ul class="list-unstyled">
+                    
                         ${pokemon.stats.map(stat => `<li><strong>${stat.stat.name}:</strong> ${stat.base_stat}</li>`).join('')}
                     </ul>
                 </div>
@@ -61,3 +54,5 @@ function displayPokemonDetails(pokemon) {
 
 // Chama a função para buscar detalhes quando a página carrega
 document.addEventListener('DOMContentLoaded', fetchPokemonDetails);
+
+//mano, para de usar IA q ta feio

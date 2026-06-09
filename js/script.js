@@ -24,22 +24,7 @@ async function fetchPokemons() {
 }
 
 // Função para exibir a lista de pokémons no DOM
-function displayPokemons(pokemons) {
-    const list = document.getElementById('pokemon-list');
-    // Limpa a lista antes de adicionar novos itens
-    list.innerHTML = '';
-    // Itera sobre cada pokémon
-    pokemons.forEach(async (pokemon) => {
-        try {
-            // Faz uma requisição adicional para obter detalhes do pokémon (imagem, etc.)
-            const pokeResponse = await fetch(pokemon.url);
-            if (!pokeResponse.ok) {
-                throw new Error('Erro ao buscar detalhes do pokémon');
-            }
-            const pokeData = await pokeResponse.json();
-            // Cria o HTML do card para o pokémon
-            const card = `
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+
                     <div class="card h-100">
                         <img src="${pokeData.sprites.front_default || 'https://via.placeholder.com/200'}" class="card-img-top" alt="${pokeData.name}">
                         <div class="card-body">
